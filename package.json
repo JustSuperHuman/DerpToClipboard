@@ -1,0 +1,51 @@
+{
+  "name": "derptoclipboard",
+  "displayName": "DerpToClipboard",
+  "description": "Copy all IntelliSense problems from current file to clipboard",
+  "publisher": "justsuperhuman",
+  "author": {
+    "name": "James",
+    "email": "james@justsuperhuman.com"
+  },
+  "version": "1.0.0",
+  "engines": {
+    "vscode": "^1.95.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [],
+  "main": "./out/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "derptoclipboard.copyProblems",
+        "title": "Copy All IntelliSense Problems"
+      },
+      {
+        "command": "derptoclipboard.copyProblemsWithIntro",
+        "title": "Copy All IntelliSense Problems with Introduction"
+      },
+      {
+        "command": "derptoclipboard.copyProblemsWithContent",
+        "title": "Copy All IntelliSense Problems with File Content"
+      }
+    ]
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "pretest": "npm run compile"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/justsuperhuman/derptoclipboard"
+  },
+  "devDependencies": {
+    "@types/node": "^22.9.0",
+    "@types/vscode": "^1.95.0",
+    "typescript": "^5.6.3",
+    "@vscode/vsce": "^2.x.x"
+  }
+}
